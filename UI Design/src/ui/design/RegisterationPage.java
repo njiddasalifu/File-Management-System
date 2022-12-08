@@ -30,17 +30,17 @@ public class RegisterationPage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        Cancelbtn = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        Name = new javax.swing.JTextField();
+        pwd = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        uname = new javax.swing.JTextField();
+        logInbtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,20 +52,20 @@ public class RegisterationPage extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name:");
 
-        jButton2.setBackground(java.awt.Color.blue);
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Login");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        Cancelbtn.setBackground(java.awt.Color.blue);
+        Cancelbtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Cancelbtn.setForeground(new java.awt.Color(255, 255, 255));
+        Cancelbtn.setText("Cancel");
+        Cancelbtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Cancelbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Cancelbtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                CancelbtnMouseClicked(evt);
             }
         });
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Cancelbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                CancelbtnActionPerformed(evt);
             }
         });
 
@@ -73,12 +73,12 @@ public class RegisterationPage extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Username:");
 
-        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+        Name.setBackground(new java.awt.Color(204, 204, 204));
 
-        jPasswordField2.setBackground(new java.awt.Color(204, 204, 204));
-        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+        pwd.setBackground(new java.awt.Color(204, 204, 204));
+        pwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField2ActionPerformed(evt);
+                pwdActionPerformed(evt);
             }
         });
 
@@ -131,25 +131,25 @@ public class RegisterationPage extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jTextField2.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        uname.setBackground(new java.awt.Color(204, 204, 204));
+        uname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                unameActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(java.awt.Color.blue);
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Register");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        logInbtn.setBackground(java.awt.Color.blue);
+        logInbtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        logInbtn.setForeground(new java.awt.Color(255, 255, 255));
+        logInbtn.setText("Login");
+        logInbtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                logInbtnMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        logInbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                logInbtnActionPerformed(evt);
             }
         });
 
@@ -173,9 +173,9 @@ public class RegisterationPage extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jButton1))
+                            .addComponent(Cancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(30, 30, 30)
+                            .addComponent(logInbtn))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                             .addGap(17, 17, 17)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -184,9 +184,9 @@ public class RegisterationPage extends javax.swing.JFrame {
                                 .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                             .addGap(18, 18, 18)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                                .addComponent(jTextField2)
-                                .addComponent(jPasswordField2)))))
+                                .addComponent(Name, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                                .addComponent(uname)
+                                .addComponent(pwd)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -199,19 +199,19 @@ public class RegisterationPage extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(uname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(Cancelbtn)
+                    .addComponent(logInbtn))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
 
@@ -232,7 +232,7 @@ public class RegisterationPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void CancelbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CancelbtnMouseClicked
         // TODO add your handling code here:
         LoginPage lgf = new LoginPage();
         lgf.setVisible(true);
@@ -240,34 +240,29 @@ public class RegisterationPage extends javax.swing.JFrame {
         lgf.setLocationRelativeTo(null);
         lgf.setDefaultCloseOperation(LoginPage.EXIT_ON_CLOSE);
         this.dispose();
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_CancelbtnMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void CancelbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_CancelbtnActionPerformed
 
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    private void pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    }//GEN-LAST:event_pwdActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void unameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_unameActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void logInbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInbtnMouseClicked
        // int p = JOptionPane.showConfirmDialog(null, Are you sure you want to register ?, Register, JOptionPane.YES_NO_OPTION);
         
-        ConfirmRegisteration lgf = new ConfirmRegisteration();
-        lgf.setVisible(true);
-        lgf.pack();
-        lgf.setLocationRelativeTo(null);
-        lgf.setDefaultCloseOperation(ConfirmRegisteration.EXIT_ON_CLOSE);
-        this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseClicked
+      
+    }//GEN-LAST:event_logInbtnMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void logInbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_logInbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -306,8 +301,8 @@ public class RegisterationPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Cancelbtn;
+    private javax.swing.JTextField Name;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -317,8 +312,8 @@ public class RegisterationPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton logInbtn;
+    private javax.swing.JPasswordField pwd;
+    private javax.swing.JTextField uname;
     // End of variables declaration//GEN-END:variables
 }

@@ -219,12 +219,8 @@ public class ResetPassword extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
- ConfirmReset rgf = new ConfirmReset();
-        rgf.setVisible(true);
-        rgf.pack();
-        rgf.setLocationRelativeTo(null);
-        rgf.setDefaultCloseOperation(ConfirmReset.EXIT_ON_CLOSE);
-        this.dispose();        // TODO add your handling code here:
+ 
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**

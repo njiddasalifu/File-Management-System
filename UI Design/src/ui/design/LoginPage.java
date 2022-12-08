@@ -40,7 +40,6 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabelRegister = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -111,7 +110,9 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Username:");
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 255));
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,16 +122,6 @@ public class LoginPage extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setText("Cancel");
-
-        jLabelRegister.setBackground(new java.awt.Color(0, 0, 102));
-        jLabelRegister.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelRegister.setText("Click here to create new account");
-        jLabelRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabelRegister.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelRegisterMouseClicked(evt);
-            }
-        });
 
         jComboBox1.setBackground(new java.awt.Color(0, 0, 102));
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,9 +185,6 @@ public class LoginPage extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(jLabelRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(330, Short.MAX_VALUE))
@@ -228,9 +216,7 @@ public class LoginPage extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelRegister)
-                .addGap(25, 25, 25))
+                .addGap(60, 60, 60))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -258,15 +244,6 @@ public class LoginPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabelRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRegisterMouseClicked
-        RegisterationPage rgf = new RegisterationPage();
-        rgf.setVisible(true);
-        rgf.pack();
-        rgf.setLocationRelativeTo(null);
-        rgf.setDefaultCloseOperation(RegisterationPage.EXIT_ON_CLOSE);
-        this.dispose();
-    }//GEN-LAST:event_jLabelRegisterMouseClicked
-
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
         ForgotPassword rgf = new ForgotPassword();
@@ -286,7 +263,12 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+AdminDasboard admin = new AdminDasboard();
+        admin.setVisible(true);
+        admin.pack();
+        admin.setLocationRelativeTo(null);
+        admin.setDefaultCloseOperation(ForgotPassword.EXIT_ON_CLOSE);
+        this.dispose();                // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -337,7 +319,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JButton jLabelRegister;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
