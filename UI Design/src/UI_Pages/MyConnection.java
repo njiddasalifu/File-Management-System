@@ -10,14 +10,14 @@ import java.sql.*;
  */
 public class MyConnection {
     public static Connection getConnection(){
-        Connection conn =null;
+        Connection con =null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/filemanagementdb?","root","salifu");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/filemanagementdb","root","salifu");
             
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-        return conn;
+        return con;
     }
 }
