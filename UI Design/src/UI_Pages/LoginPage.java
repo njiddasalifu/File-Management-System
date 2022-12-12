@@ -199,7 +199,7 @@ public class LoginPage extends javax.swing.JFrame {
         }else if(password.equals("")){
             JOptionPane.showMessageDialog(null, "password field is empty");
         }else{
-            String sql ="SELECT * FROM logintb WHERE 'username'=? AND 'password'=?";
+            String sql ="SELECT * FROM 'logintb' WHERE username='?' AND password='?'";
            
             try {
                 ps = conn.prepareStatement(sql);
@@ -221,6 +221,7 @@ public class LoginPage extends javax.swing.JFrame {
                 }
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, ex);
+               
             }
         }
     }//GEN-LAST:event_jButton2ActionPerformed
