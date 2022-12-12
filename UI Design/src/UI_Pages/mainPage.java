@@ -8,13 +8,15 @@ package UI_Pages;
  *
  * @author INTER-TECH
  */
-public class UIDesign {
+public class mainPage {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //LoginPage logp =new LoginPage();
+        //logp.setVisible(true);
     }
     
 }
