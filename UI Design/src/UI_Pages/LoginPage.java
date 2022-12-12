@@ -192,14 +192,16 @@ public class LoginPage extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         String username = usernamefield.getText();
-        String password = String.valueOf(passwordfield.getPassword());
+        String password = passwordfield.getText();
         
         if(username.equalsIgnoreCase("")){
             JOptionPane.showMessageDialog(null, "username field is empty");
         }else if(password.equals("")){
             JOptionPane.showMessageDialog(null, "password field is empty");
         }else{
-            String sql ="SELECT * FROM 'logintb' WHERE username='?' AND password='?'";
+            String sql ="SELECT * FROM `logintb` WHERE username=? AND password=?";
+            // we can also use Select * from `logintb` where username='"+username+"' and password='"+password+"';
+            // and then instead of collecting like below, we use just rs=ps.executeQuery();
            
             try {
                 ps = conn.prepareStatement(sql);
