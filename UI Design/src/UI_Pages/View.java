@@ -3,19 +3,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package UI_Pages;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
  * @author Windows
  */
 public class View extends javax.swing.JFrame {
+     Connection conn=null;
+    ResultSet rs=null;
+    PreparedStatement ps=null;
 
     /**
      * Creates new form View
      */
     public View() {
         initComponents();
+         conn = MyConnection.getConnection();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -154,6 +164,7 @@ public class View extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        ViewUsers();
         viewusers vu= new viewusers();
         vu.setVisible(true);
         setVisible(false);
@@ -166,6 +177,20 @@ public class View extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    
+    public void ViewUsers(){
+        try{
+          String sql="SELECT * FROM `user`";
+          ps=conn.prepareStatement(sql);
+          rs=ps.executeQuery();
+          if(rs.next()){
+              viewusers vu = new viewusers();
+              vu.viewuserstb.setModel(DbUtils.resultSetToTableModel(rs));
+          }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
     /**
      * @param args the command line arguments
      */

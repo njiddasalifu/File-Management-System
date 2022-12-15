@@ -4,6 +4,8 @@
  */
 package UI_Pages;
 
+import java.io.File;
+
 /**
  *
  * @author INTER-TECH
@@ -15,8 +17,9 @@ public class mainPage {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //LoginPage logp =new LoginPage();
-        //logp.setVisible(true);
+        LoginPage logp =new LoginPage();
+        logp.setVisible(true);
+        File myFile = new File("");
     }
     
 }

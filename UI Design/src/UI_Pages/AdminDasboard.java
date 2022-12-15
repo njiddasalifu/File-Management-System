@@ -4,6 +4,10 @@
  */
 package UI_Pages;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+
 /**
  *
  * @author Windows
@@ -33,7 +37,6 @@ public class AdminDasboard extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -90,8 +93,6 @@ public class AdminDasboard extends javax.swing.JFrame {
             }
         });
 
-        jButton10.setText("jButton10");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -100,9 +101,8 @@ public class AdminDasboard extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton8)
-                    .addComponent(jButton9)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
+                    .addComponent(jButton9))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,9 +111,7 @@ public class AdminDasboard extends javax.swing.JFrame {
                 .addComponent(jButton8)
                 .addGap(29, 29, 29)
                 .addComponent(jButton9)
-                .addGap(26, 26, 26)
-                .addComponent(jButton10)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         jButton1.setBackground(new java.awt.Color(0, 0, 153));
@@ -125,6 +123,11 @@ public class AdminDasboard extends javax.swing.JFrame {
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add_file_wc33xt3lcrdo_32.png"))); // NOI18N
         jButton2.setText("NEW FILE");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(0, 0, 153));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -135,10 +138,21 @@ public class AdminDasboard extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 153));
         jLabel3.setText("WELCOME TO THE FILE MANAGEMENT SYSTEM");
 
+        jButton4.setBackground(new java.awt.Color(0, 0, 153));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("DELETE");
 
+        jButton5.setBackground(new java.awt.Color(0, 0, 153));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("SEARCH");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
+        jButton6.setBackground(new java.awt.Color(0, 0, 153));
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("SHARE");
 
         jButton7.setBackground(new java.awt.Color(153, 0, 0));
@@ -175,15 +189,14 @@ public class AdminDasboard extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jButton6)
                                 .addComponent(jButton3)))))
-                .addGap(0, 81, Short.MAX_VALUE))
+                .addGap(0, 75, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(24, 24, 24)
@@ -196,9 +209,12 @@ public class AdminDasboard extends javax.swing.JFrame {
                             .addComponent(jButton4)
                             .addComponent(jButton5)
                             .addComponent(jButton6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton7)
-                        .addGap(28, 28, 28))))
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -206,6 +222,7 @@ public class AdminDasboard extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -231,9 +248,37 @@ public class AdminDasboard extends javax.swing.JFrame {
        v.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        CreateFile();
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
+    public void CreateFile(){
+        //String path= "C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles";
+        try{
+            File file = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles\\Salif");
+            if(file.createNewFile()){
+                System.out.println("File created: "+file.getName());
+            } else{
+                System.out.println("File already exist");
+            }
+            
+        }catch(IOException e){
+            System.out.println("An error occured");
+            e.printStackTrace();
+        }
+
+    }
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -268,7 +313,6 @@ public class AdminDasboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
