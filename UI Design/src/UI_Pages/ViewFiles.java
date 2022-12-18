@@ -67,6 +67,7 @@ public class ViewFiles extends javax.swing.JFrame {
         jLabel2.setText("VIEW");
 
         jButton1.setBackground(new java.awt.Color(0, 0, 204));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("DELETED FILES");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +76,7 @@ public class ViewFiles extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(0, 0, 204));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("CREATED FILES");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +85,7 @@ public class ViewFiles extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(204, 0, 0));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("BACK");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
