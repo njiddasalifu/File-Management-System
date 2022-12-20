@@ -4,6 +4,8 @@
  */
 package UI_Pages;
 
+import javax.swing.JFileChooser;
+
 /**
  *
  * @author Windows
@@ -157,9 +159,13 @@ public class ViewFiles extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        ViewCreatedFiles vf = new ViewCreatedFiles();
+        /*ViewCreatedFiles vf = new ViewCreatedFiles();
         vf.setVisible(true);
-        setVisible(false);
+        setVisible(false);*/
+        JFileChooser j=new JFileChooser("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles");
+        // open the save dialog
+        j.showSaveDialog(null);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

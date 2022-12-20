@@ -215,7 +215,7 @@ public class LoginPage extends javax.swing.JFrame {
                 
                 if(rs.next()){
                     JOptionPane.showMessageDialog(null, "LogIn successuful");
-                    AdminDasboard ad = new AdminDasboard();
+                    AdminDashboard ad = new AdminDashboard();
                     ad.setVisible(true);
                     setVisible(false);
                     
@@ -229,6 +229,7 @@ public class LoginPage extends javax.swing.JFrame {
                
             }
         }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

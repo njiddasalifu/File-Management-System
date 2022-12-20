@@ -170,6 +170,7 @@ public class AddUser extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -193,7 +194,7 @@ public class AddUser extends javax.swing.JFrame {
             ps.setString(2, password);
             ps.execute();
             JOptionPane.showMessageDialog(null, "User successfully added");
-                    AdminDasboard ad = new AdminDasboard();
+                    AdminDashboard ad = new AdminDashboard();
                     ad.setVisible(true);
                     setVisible(false);
         }catch(Exception e){
@@ -204,7 +205,7 @@ public class AddUser extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-         AdminDasboard ad = new AdminDasboard();
+         AdminDashboard ad = new AdminDashboard();
         setVisible(false);
         ad.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
