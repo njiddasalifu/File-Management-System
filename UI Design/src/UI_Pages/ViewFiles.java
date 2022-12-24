@@ -4,6 +4,7 @@
  */
 package UI_Pages;
 
+import java.io.File;
 import javax.swing.JFileChooser;
 
 /**
@@ -159,10 +160,21 @@ public class ViewFiles extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        File dir = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles");
+      String[] children = dir.list();
+      
+      if (children == null) {
+         System.out.println("Folder is Empty");
+      } else {
+         for (int i = 0; i < children.length; i++) {
+            String filename = children[i];
+            System.out.println(filename);
+         }
+      }
         /*ViewCreatedFiles vf = new ViewCreatedFiles();
         vf.setVisible(true);
         setVisible(false);*/
-        JFileChooser j=new JFileChooser("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles");
+        JFileChooser j=new JFileChooser("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles ");
         // open the save dialog
         j.showSaveDialog(null);
         
@@ -195,6 +207,7 @@ public class ViewFiles extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
