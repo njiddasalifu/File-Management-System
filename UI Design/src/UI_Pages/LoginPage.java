@@ -50,7 +50,7 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 0, 153));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filemanager icon.png"))); // NOI18N
         jLabel1.setText("FILE MANAGEMENT SYSTEM");
 

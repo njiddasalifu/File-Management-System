@@ -160,6 +160,9 @@ public class ViewFiles extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        /*ViewCreatedFiles cf = new ViewCreatedFiles();
+        cf.setVisible(true);
+        setVisible(false);*/
         File dir = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles");
       String[] children = dir.list();
       
@@ -171,12 +174,13 @@ public class ViewFiles extends javax.swing.JFrame {
             System.out.println(filename);
          }
       }
+      
         /*ViewCreatedFiles vf = new ViewCreatedFiles();
         vf.setVisible(true);
         setVisible(false);*/
-        JFileChooser j=new JFileChooser("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles ");
+        //JFileChooser j=new JFileChooser("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles ");
         // open the save dialog
-        j.showSaveDialog(null);
+        //j.showSaveDialog(null);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

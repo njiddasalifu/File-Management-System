@@ -261,7 +261,10 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        CreateFile();
+        CreateFile cff=new CreateFile();
+        cff.setVisible(true);
+        setVisible(false);
+      
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -279,23 +282,6 @@ public class AdminDashboard extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public void CreateFile(){
-        //String path= "C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles";
-        try{
-            File file = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles\\FET.pdf");
-            if(file.createNewFile()){
-                System.out.println("File created: "+file.getName());
-            } else{
-                System.out.println("File already exist");
-            }
-            
-        }catch(IOException e){
-            System.out.println("An error occured");
-            e.printStackTrace();
-        }
-
-    }
-    
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
