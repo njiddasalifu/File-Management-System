@@ -151,7 +151,7 @@ public class UserDashboard extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(153, 0, 0));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("EXIT");
+        jButton7.setText("CLOSE");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
