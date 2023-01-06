@@ -6,8 +6,11 @@ package UI_Pages;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import net.proteanit.sql.DbUtils;
+
 
 /**
  *
@@ -166,10 +169,15 @@ public class View extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        ViewUsers();
-        viewusers vu= new viewusers();
-        vu.setVisible(true);
-        setVisible(false);
+        String query="SELECT * FROM `user`";
+         try {
+             ps=conn.prepareStatement(query);
+             rs=ps.executeQuery();
+         } catch (SQLException ex) {
+             Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+         }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -179,20 +187,6 @@ public class View extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    
-    public void ViewUsers(){
-        try{
-          String sql="SELECT * FROM `user`";
-          ps=conn.prepareStatement(sql);
-          rs=ps.executeQuery();
-          if(rs.next()){
-              viewusers vu = new viewusers();
-              vu.viewuserstb.setModel(DbUtils.resultSetToTableModel(rs));
-          }
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }
     /**
      * @param args the command line arguments
      */

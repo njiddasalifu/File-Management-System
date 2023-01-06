@@ -187,7 +187,7 @@ public class AddUser extends javax.swing.JFrame {
         try{
             JOptionPane.showConfirmDialog(null, "Are you sure you want to add this user?", "Add user",JOptionPane.YES_NO_OPTION);
             
-            String sql = "INSERT INTO `user`(`username`,`password`) VALUES(?,?)";
+            String sql = "INSERT INTO `users`(`username`,`password`) VALUES(?,?)";
             ps=conn.prepareStatement(sql);
             
             ps.setString(1, username);
