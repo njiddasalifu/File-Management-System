@@ -179,8 +179,8 @@ public class AdminDashboard extends javax.swing.JFrame {
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/share_x6tscza51v6a_32.png"))); // NOI18N
         jButton6.setText("SHARE");
 
-        jButton7.setBackground(new java.awt.Color(0, 0, 102));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton7.setBackground(new java.awt.Color(0, 0, 153));
+        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("LOGOUT");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -190,7 +190,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         });
 
         jButton10.setBackground(new java.awt.Color(153, 0, 0));
-        jButton10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton10.setForeground(new java.awt.Color(255, 255, 255));
         jButton10.setText("CLOSE");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -323,6 +323,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+       dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     /**

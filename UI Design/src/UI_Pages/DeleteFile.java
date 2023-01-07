@@ -3,21 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package UI_Pages;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Windows
  */
-public class CreateFile extends javax.swing.JFrame {
+public class DeleteFile extends javax.swing.JFrame {
 
     /**
-     * Creates new form CreateFile
+     * Creates new form DeleteFile
      */
-    public CreateFile() {
+    public DeleteFile() {
         initComponents();
     }
 
@@ -36,9 +38,7 @@ public class CreateFile extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         filenamefield = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        filetypefield = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,13 +71,10 @@ public class CreateFile extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add_file_wc33xt3lcrdo_32.png"))); // NOI18N
-        jLabel2.setText("CREATE NEW FILE");
+        jLabel2.setText("DELETE NEW FILE");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("filename:");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("filetype:");
 
         jButton2.setBackground(new java.awt.Color(153, 0, 0));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +87,7 @@ public class CreateFile extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 0, 153));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("create");
+        jButton3.setText("delete");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -107,17 +104,14 @@ public class CreateFile extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(118, 118, 118)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(filetypefield, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel3)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton3))
-                            .addComponent(filenamefield, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jButton2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton3))
+                        .addComponent(filenamefield, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -126,15 +120,11 @@ public class CreateFile extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(33, 33, 33)
+                .addGap(58, 58, 58)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(filenamefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(filetypefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addComponent(filenamefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
@@ -155,7 +145,6 @@ public class CreateFile extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -167,32 +156,32 @@ public class CreateFile extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        CreateFile();
+        DeleteFile();
         
-        
-        
-        
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    public void CreateFile(){
+    public void DeleteFile(){
         //String path= "C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles";
         
         String filename = filenamefield.getText();
-        String filetype = filetypefield.getText();
         
         if(filename.equalsIgnoreCase("")){
             JOptionPane.showMessageDialog(null, "filename field is empty");
-        }else if(filetype.equals("")){
-            JOptionPane.showMessageDialog(null, "filetype field is empty");
-        }else{
-        
+            
+        }
+         else{
+ 
+        }
+        JOptionPane.showConfirmDialog(null, "Are you sure you want to add this user?", "Add user",JOptionPane.YES_NO_OPTION);
+            
+        File sourceFile = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles\\"+filename);
+        File desFile = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\DeletedFiles\\"+filename);
+            
         try{
-            File file = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles\\"+filename);
-            if(file.createNewFile()){
-                System.out.println("File created: "+file.getName());
-            } else{
-                System.out.println("File already exist");
-            }
+            Files.copy(sourceFile.toPath(), desFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            sourceFile.delete();
+            System.out.println("File deleted successfully");
             
         }catch(IOException e){
             System.out.println("An error occured");
@@ -200,7 +189,8 @@ public class CreateFile extends javax.swing.JFrame {
         }
 
     }
-    }
+    
+    
     
     /**
      * @param args the command line arguments
@@ -219,35 +209,31 @@ public class CreateFile extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CreateFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeleteFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CreateFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeleteFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CreateFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeleteFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CreateFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeleteFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
-        
-        
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CreateFile().setVisible(true);
+                new DeleteFile().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField filenamefield;
-    private javax.swing.JTextField filetypefield;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
