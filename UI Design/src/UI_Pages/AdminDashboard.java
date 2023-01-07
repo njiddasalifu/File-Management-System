@@ -293,9 +293,9 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-       View v=new View();
+       View vf=new View();
         setVisible(false);
-       v.setVisible(true);
+       vf.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -337,6 +337,9 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        RecoverFile rf=new RecoverFile();
+        setVisible(false);
+        rf.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     
