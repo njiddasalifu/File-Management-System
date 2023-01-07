@@ -14,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author Windows
  */
-public class DeleteFile extends javax.swing.JFrame {
+public class RecoverFile extends javax.swing.JFrame {
 
     /**
-     * Creates new form DeleteFile
+     * Creates new form RecoverFile
      */
-    public DeleteFile() {
+    public RecoverFile() {
         initComponents();
     }
 
@@ -70,8 +70,8 @@ public class DeleteFile extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/delete_file_do9xiy1o5hfx_32.png"))); // NOI18N
-        jLabel2.setText("DELETE NEW FILE");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/update_qz58jrz7g01c_32.png"))); // NOI18N
+        jLabel2.setText("RECOVER FILE");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("filename:");
@@ -87,7 +87,7 @@ public class DeleteFile extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 0, 153));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Delete");
+        jButton3.setText("Recover");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -157,12 +157,11 @@ public class DeleteFile extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        DeleteFile();
-        
+        RecoverFile();
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    public void DeleteFile(){
+     public void RecoverFile(){
         //String path= "C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles";
         
         String filename = filenamefield.getText();
@@ -176,13 +175,13 @@ public class DeleteFile extends javax.swing.JFrame {
         }
         JOptionPane.showConfirmDialog(null, "Are you sure you want to add this user?", "Add user",JOptionPane.YES_NO_OPTION);
             
-        File sourceFile = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles\\"+filename);
-        File desFile = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\DeletedFiles\\"+filename);
-            
+         File desFile = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\DeletedFiles\\"+filename);
+         File sourceFile = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles\\"+filename);
+        
         try{
-            Files.copy(sourceFile.toPath(), desFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-            sourceFile.delete();
-            System.out.println("File deleted successfully");
+            Files.copy(desFile.toPath(), sourceFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+          desFile.delete();
+            System.out.println("File recovered successfully");
             
         }catch(IOException e){
             System.out.println("An error occured");
@@ -190,9 +189,6 @@ public class DeleteFile extends javax.swing.JFrame {
         }
 
     }
-    
-    
-    
     /**
      * @param args the command line arguments
      */
@@ -210,20 +206,20 @@ public class DeleteFile extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DeleteFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RecoverFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DeleteFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RecoverFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DeleteFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RecoverFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DeleteFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RecoverFile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeleteFile().setVisible(true);
+                new RecoverFile().setVisible(true);
             }
         });
     }
