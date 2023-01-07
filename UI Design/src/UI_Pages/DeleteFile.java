@@ -87,7 +87,7 @@ public class DeleteFile extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 0, 153));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("delete");
+        jButton3.setText("Delete");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
