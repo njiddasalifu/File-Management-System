@@ -70,7 +70,7 @@ public class dfileUser extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add_file_wc33xt3lcrdo_32.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/delete_file_do9xiy1o5hfx_32.png"))); // NOI18N
         jLabel2.setText("DELETE NEW FILE");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -87,7 +87,7 @@ public class dfileUser extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 0, 153));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("delete");
+        jButton3.setText("Delete");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -145,6 +145,7 @@ public class dfileUser extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

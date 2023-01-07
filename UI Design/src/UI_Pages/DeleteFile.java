@@ -70,7 +70,7 @@ public class DeleteFile extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add_file_wc33xt3lcrdo_32.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/delete_file_do9xiy1o5hfx_32.png"))); // NOI18N
         jLabel2.setText("DELETE NEW FILE");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

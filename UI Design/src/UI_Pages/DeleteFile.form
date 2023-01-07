@@ -145,7 +145,7 @@
               <Color blue="99" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/icons/add_file_wc33xt3lcrdo_32.png"/>
+              <Image iconType="3" name="/icons/delete_file_do9xiy1o5hfx_32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="DELETE NEW FILE"/>
           </Properties>
