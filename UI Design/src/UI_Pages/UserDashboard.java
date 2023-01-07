@@ -143,6 +143,11 @@ public class UserDashboard extends javax.swing.JFrame {
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/delete_file_do9xiy1o5hfx_32.png"))); // NOI18N
         jButton4.setText("DELETE");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(0, 0, 153));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -273,7 +278,9 @@ public class UserDashboard extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-       
+       cfileUser cff=new cfileUser();
+        cff.setVisible(true);
+        setVisible(false);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -296,6 +303,13 @@ public class UserDashboard extends javax.swing.JFrame {
         lp.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+       dfileUser df=new dfileUser();
+        setVisible(false);
+        df.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
