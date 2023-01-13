@@ -173,7 +173,7 @@ public class RecoverFile extends javax.swing.JFrame {
          else{
  
         }
-        JOptionPane.showConfirmDialog(null, "Are you sure you want to add this user?", "Add user",JOptionPane.YES_NO_OPTION);
+        JOptionPane.showConfirmDialog(null, "Are you sure you want to recover this file?", "Add user",JOptionPane.YES_NO_OPTION);
             
          File desFile = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\DeletedFiles\\"+filename);
          File sourceFile = new File("C:\\Users\\Windows\\Desktop\\FileManagementSystem-with-Java\\FileSystem\\CreatedFiles\\"+filename);
