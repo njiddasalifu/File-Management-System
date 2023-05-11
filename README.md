@@ -1,4 +1,4 @@
-# FileManagementSystem-with-Java
+# File Management System
 # This is a project to implement a file management system 
 # Programming Technologies used are:
 # Java swing is used for the UI/UX design
